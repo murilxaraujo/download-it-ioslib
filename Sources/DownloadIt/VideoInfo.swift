@@ -10,7 +10,7 @@ import Foundation
 typealias JSON = [String: Any]
 
 public struct VideoInfo: Codable, Hashable {
-    public var downloadURL: URL
+    public var downloadUrl: String
     public var title: String
     public var videoExtension: String
     public var fileSize: String
@@ -18,10 +18,4 @@ public struct VideoInfo: Codable, Hashable {
     public var width: Int
     public var fps: Int
     public var resolution: Int
-}
-
-extension VideoInfo {
-    private enum CodingKeys: String, CodingKey {
-        case downloadURL = "downloadUrl", title, videoExtension, fileSize, height, width, fps, resolution
-    }
 }
