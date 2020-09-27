@@ -33,12 +33,12 @@ public class DownloadIt {
             
             let decoder = JSONDecoder()
             
-            guard let video = try? decoder.decode([VideoInfo].self, from: data) else {
-                result(.failure(DownloadItErrors.couldntDecode))
-                return
+            do {
+                let video = try decoder.decode([VideoInfo].self, from: data)
+                result(.success(video))
+            } catch let e {
+                result(.failure(e))
             }
-            
-            result(.success(video))
         }.resume()
     }
 }
