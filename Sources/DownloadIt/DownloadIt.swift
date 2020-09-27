@@ -13,7 +13,7 @@ public enum DownloadItErrors: Error {
     case couldntDecode
 }
 
-public class MADownloadIt {
+public class DownloadIt {
     public static func getInfo(for youtubeVideoURLString: String, result: @escaping (Result<[VideoInfo], Error>)->Void) {
         let requestURLString = "https://downloaditapi.azurewebsites.net/Youtube/Info?url=\(youtubeVideoURLString)"
         guard let url = URL(string: requestURLString) else {

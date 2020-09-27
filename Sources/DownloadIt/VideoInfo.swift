@@ -10,14 +10,14 @@ import Foundation
 typealias JSON = [String: Any]
 
 public struct VideoInfo: Codable {
-    var downloadURL: URL
-    var title: String
-    var videoExtension: String
-    var fileSize: String
-    var height: Int
-    var width: Int
-    var fps: Int
-    var resolution: Int
+    public var downloadURL: URL
+    public var title: String
+    public var videoExtension: String
+    public var fileSize: String
+    public var height: Int
+    public var width: Int
+    public var fps: Int
+    public var resolution: Int
 }
 
 extension VideoInfo {
