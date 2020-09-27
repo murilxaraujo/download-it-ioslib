@@ -14,8 +14,8 @@ public struct VideoInfo: Codable, Hashable {
     public var title: String
     public var videoExtension: String
     public var fileSizeHumanReadable: String
-    public var height: Int
-    public var width: Int
-    public var fps: Int
-    public var resolution: Int
+    public var height: Int?
+    public var width: Int?
+    public var fps: Int?
+    public var resolution: Int?
 }
