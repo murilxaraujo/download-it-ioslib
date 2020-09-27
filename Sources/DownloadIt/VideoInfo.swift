@@ -9,7 +9,7 @@ import Foundation
 
 typealias JSON = [String: Any]
 
-public struct VideoInfo: Codable {
+public struct VideoInfo: Codable, Hashable {
     public var downloadURL: URL
     public var title: String
     public var videoExtension: String
